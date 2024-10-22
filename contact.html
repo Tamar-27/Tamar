@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Tamar Yibrah</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f1e9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f9eba;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color:  #1f9eba;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        input[type="submit"]:hover {
+            background-color:  #2b8724;
+        }
+        a{
+            color:#333
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color:  #1f9eba;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out if you'd like to connect or ask any questions!</p>
+    </header>
+
+    <section>
+        <h2>Message Me</h2>
+        <form  action="sendEmail.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="Subject">Subject:</label>
+            <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
+
+            <div class="radio-group">
+                Type of message:
+                <label><input type="radio" name="type" value="g" required> General</label>
+                <label><input type="radio" name="type" value="f"> Feedback</label>
+                <label><input type="radio" name="type" value="q"> Question</label>
+            </div>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer>
+        <p><a href="./index.html">&larr; Back to Home</a></p>
+        <p><a href="./travel.html">&larr;Travel Experience</a></p>
+    </footer>
+
+</body>
+</html>
+
